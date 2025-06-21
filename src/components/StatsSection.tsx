@@ -26,7 +26,7 @@ const stats = [
 
 export const StatsSection = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-background">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,10 +35,10 @@ export const StatsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-normal mb-4">
+          <h2 className="text-4xl md:text-5xl text-display mb-4">
             Powering LinkedIn Success
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-body max-w-2xl mx-auto">
             See how Postify is transforming LinkedIn content creation for thousands of professionals
           </p>
         </motion.div>
@@ -51,15 +51,15 @@ export const StatsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center glass rounded-xl p-6"
+              className="text-center glass-premium rounded-xl p-6 group hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-gradient-premium mb-2">
                 {stat.number}
               </div>
               <div className="text-lg font-medium text-white mb-2">
                 {stat.label}
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-body">
                 {stat.description}
               </div>
             </motion.div>
